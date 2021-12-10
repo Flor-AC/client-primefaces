@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.3 (tags/2.3-7528; 2013-04-29T19:34:10+0000) JAXWS-RI/2.2.8 JAXWS/2.2 svn-revision#unknown. --><xs:schema xmlns:tns="http://service.service.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.service.com/">
+
+<xs:element name="actualizarEmpleado" type="tns:actualizarEmpleado"/>
+
+<xs:element name="actualizarEmpleadoResponse" type="tns:actualizarEmpleadoResponse"/>
+
+<xs:element name="eliminarEmpleado" type="tns:eliminarEmpleado"/>
+
+<xs:element name="eliminarEmpleadoResponse" type="tns:eliminarEmpleadoResponse"/>
+
+<xs:element name="guardarEmpleado" type="tns:guardarEmpleado"/>
+
+<xs:element name="guardarEmpleadoResponse" type="tns:guardarEmpleadoResponse"/>
+
+<xs:element name="mostrarTodosEmpleados" type="tns:mostrarTodosEmpleados"/>
+
+<xs:element name="mostrarTodosEmpleadosResponse" type="tns:mostrarTodosEmpleadosResponse"/>
+
+<xs:element name="mostrarUnEmpleado" type="tns:mostrarUnEmpleado"/>
+
+<xs:element name="mostrarUnEmpleadoResponse" type="tns:mostrarUnEmpleadoResponse"/>
+
+<xs:complexType name="actualizarEmpleado">
+<xs:sequence>
+<xs:element name="pojo" type="tns:empleado" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empleado">
+<xs:sequence>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actualizarEmpleadoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarTodosEmpleados">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="mostrarTodosEmpleadosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empleado" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarEmpleado">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarEmpleadoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="guardarEmpleado">
+<xs:sequence>
+<xs:element name="pojo" type="tns:empleado" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="guardarEmpleadoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarUnEmpleado">
+<xs:sequence>
+<xs:element name="id" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="mostrarUnEmpleadoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empleado" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
